@@ -1,3 +1,4 @@
+import 'package:counter_test/recordar_password.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -144,7 +145,12 @@ class _DatosState extends State<Datos> {
             height: 20,
           ),
           TextButton(
-              onPressed: () => {},
+              onPressed: () => {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const RecordarPassword()))
+                  },
               child: const Text(
                 "Politicas de privacidad",
                 style: TextStyle(fontSize: 12),
@@ -180,14 +186,6 @@ class _RememberState extends State<Remember> {
           style: TextStyle(fontSize: 12),
         ),
         const Spacer(),
-        TextButton(
-          onPressed:
-              () {}, // ------------------------------------------------------------------------------------------------
-          child: const Text(
-            "Olvido su contraseña",
-            style: TextStyle(fontSize: 12),
-          ),
-        ),
       ],
     );
   }
@@ -257,6 +255,14 @@ class Botones extends StatelessWidget {
                   fontSize: 18,
                 ),
               )),
+        ),
+        TextButton(
+          onPressed:
+              () {}, // ------------------------------------------------------------------------------------------------
+          child: const Text(
+            "Olvido su contraseña",
+            style: TextStyle(fontSize: 12),
+          ),
         ),
       ],
     );
